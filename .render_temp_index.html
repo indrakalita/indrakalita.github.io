@@ -171,29 +171,27 @@
 
 						</div>
 					</div>
-				<!-- Toggle button for sidebar -->
-				<a href="#sidebar" class="toggle">Menu</a>
+
 				<!-- Sidebar -->
-					<div id="sidebar" class="inactive">
-						 <div class="inner" id="sidebar-placeholder">
-						  </div>
+					<div id="sidebar">
+						<div class="inner">
+							<!-- Menu -->
+								<div id="sidebar-placeholder"></div>
+
 						</div>
+					</div>
 
 			</div>
 			<script>
   fetch('sidebar.html')
-    .then(response => response.text())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not OK');
+      }
+      return response.text();
+    })
     .then(data => {
       document.getElementById('sidebar-placeholder').innerHTML = data;
-
-      // Toggle sidebar after content is loaded
-      const sidebar = document.getElementById('sidebar');
-      const toggle = document.getElementById('sidebarToggle');
-
-      toggle.addEventListener('click', function (e) {
-        e.preventDefault();
-        sidebar.classList.toggle('inactive');
-      });
     })
     .catch(error => {
       console.error('Error loading sidebar:', error);
