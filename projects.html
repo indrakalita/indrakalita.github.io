@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Indrajit Kalita - Projects</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="index.html" class="logo"><strong>Indrajit Kalita,</strong> PHD</a>
+                <ul class="icons">
+                    <li><a href="https://linkedin.com/in/kalita-indrajit" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://scholar.google.co.in/citations?user=K32wqykAAAAJ&hl=en" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+                    <li><a href="https://www.webofscience.com/wos/author/record/HGB-6863-2022" class="icon brands fa-weibo"><span class="label">Web of Science</span></a></li>
+                    <li><a href="https://github.com/indrakalita" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                    <li><a href="https://orcid.org/0000-0002-2854-0709" class=" icon brands fa-orcid"><span class="label">Orcid</span></a></li>
+                </ul>
+            </header>
+
+            <!-- Projects Section -->
+            <section>
+    <header class="major">
+        <h2>Selected Projects</h2>
+    </header>
+    <div class="posts">
+        <article>
+            <a href="#" class="image"><img src="images/" alt="" /></a>
+            <h3>Seasonal Rainbelt Forecast</h3>
+            <p>Currently working on seasonal rainbelt forecasting using a data-driven approach that incorporates partial differential equations (PDE) as a regularizer to improve model accuracy and physical consistency.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">More</a></li>
+            </ul>
+        </article>
+        <article>
+            <a href="#" class="image"><img src="images/" alt="" /></a>
+            <h3>Rainfall Forecasting (ongoing)</h3>
+            <p>A deep learning model predicts rainfall over Ghana with accuracy comparable to or better than ECMWF’s 18-hour forecasts. Combining this model with traditional numerical weather prediction further improves performance.</p>
+            <ul class="actions">
+                <li><a href="https://math.bu.edu/people/atchade/rainfall.html/" class="button">More</a></li>
+                <li><a href="https://arxiv.org/pdf/2410.14062" class="button">Paper</a></li>
+            </ul>
+        </article>
+        <article>
+            <a href="#" class="image"><img src="imgs/h2o.jpg" alt="" /></a>
+            <h3>H2OforAll</h3>
+            <p>Horizon Europe project H2OforAll “Innovative Integrated Tools and Technologies to Protect and Treat Drinking Water from Disinfection Byproducts (DBPs)” (total budget of €3,452,700.50, Partners organizations 17) funded by the European Union (project lead on behalf of CYENS)</p>
+            <ul class="actions">
+                <li><a href="https://h2oforall.eu/" class="button">More</a></li>
+                <li><a href="https://pubs.acs.org/doi/pdf/10.1021/acsestwater.3c00664" class="button">Paper</a></li>
+            </ul>
+        </article>
+        <article>
+            <a href="#" class="image"><img src="imgs/area.jpg" alt="" /></a>
+            <h3>Detection of Area Estimation using satellite images</h3>
+            <p>Detect the area occupied by swimming pools/buildings inside the geographical area under study based on their canopy from high spatial resolution satellite imagery, using advanced, state-of-the-art proprietary AI models.</p>
+            <ul class="actions">
+                <li><a href="#" class="button">More</a></li>
+            </ul>
+        </article>
+        <article>
+            <a href="#" class="image"><img src="imgs/Internship.jpg" alt="" /></a>
+            <h3>Land Use Land Cover Change Detection</h3>
+            <p>Land Use Change Detection Using Deep Siamese Neural Networks and Weakly Supervised Learning</p>
+            <ul class="actions">
+                <li><a href="https://superworld.cyens.org.cy/andreas/papers/land_change_CAIP21.pdf" class="button">Paper</a></li>
+            </ul>
+        </article>
+        <article>
+            <a href="#" class="image"><img src="imgs/Goal1.jpg" alt="" /></a>
+            <h3>Adaptive Land Cover Classification</h3>
+            <p>Deep learning based adaptive land cover monitoring by analyzing remotely sensed images</p>
+            <ul class="actions">
+                <li><a href="https://shodhganga.inflibnet.ac.in/handle/10603/428520" class="button">More</a></li>
+                <li><a href="docs/thesisPPT.pptx" class="button">Presentation</a></li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar-placeholder"></div>
+<script>
+  fetch('sidebar.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not OK');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('sidebar-placeholder').innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error loading sidebar:', error);
+    });
+</script>
+
+</body>
+</html>
