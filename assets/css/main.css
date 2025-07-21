@@ -2070,6 +2070,38 @@ button,
         top: 1em;
         width: 5em; } }
 
+#sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 275px;
+  background: #1c1c1c;
+  color: #fff;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+/* Start hidden (slide out left) */
+#sidebar.inactive {
+  transform: translateX(-275px);
+}
+
+/* Hamburger toggle button */
+#sidebarToggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  z-index: 1100;
+  color: #fff;
+  background: #1c1c1c;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
 /* Header */
 #header {
   display: -moz-flex;

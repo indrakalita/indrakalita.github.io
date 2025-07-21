@@ -175,29 +175,25 @@
 				<a href="#sidebar" class="toggle">Menu</a>
 				<!-- Sidebar -->
 					<div id="sidebar" class="inactive">
-						  <div class="inner">
-						    <div id="sidebar-placeholder"></div>
+						 <div class="inner" id="sidebar-placeholder">
 						  </div>
 						</div>
 
 			</div>
 			<script>
-  // Load sidebar HTML
-  fetch('/sidebar.html')
+  fetch('sidebar.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('sidebar-placeholder').innerHTML = data;
 
-      // Add toggle functionality once sidebar is loaded
+      // Toggle sidebar after content is loaded
       const sidebar = document.getElementById('sidebar');
-      const toggleBtn = document.querySelector('.toggle');
+      const toggle = document.getElementById('sidebarToggle');
 
-      if (toggleBtn && sidebar) {
-        toggleBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-          sidebar.classList.toggle('inactive');
-        });
-      }
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        sidebar.classList.toggle('inactive');
+      });
     })
     .catch(error => {
       console.error('Error loading sidebar:', error);
