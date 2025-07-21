@@ -157,56 +157,31 @@ This dataset, known as ASCD, comprises multisensor data collected across various
 					</div>
 
 				<!-- Sidebar -->
+					<!-- Sidebar -->
 					<div id="sidebar">
 						<div class="inner">
 							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">About me</a></li>
-										<li><a href="resources.html">Resources</a></li>
-										<li><a href="blog.html">Blogs</a></li>
-									</ul>
-								</nav>
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Journey Through Pixels</h2>
-									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="imgs/I1.jpg" alt="" /></a>
-											<p></p>
-										</article>
-									</div>
-									
-								</section>
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<p></p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">indrajit@bu.edu</a></li>
-										<li class="icon solid fa-phone">(***) ***-****</li>
-										<li class="icon solid fa-home">Center for Computing & Data Sciences, 665 Commonwealth Ave, Boston, MA 02215</li>
-									</ul>
-								</section>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Indrajit Kalita. All rights reserved.  Design from: <a href="https://html5up.net">HTML5 UP</a> Editorial.</p>
-								</footer>
+								<div id="sidebar-placeholder"></div>
 
 						</div>
 					</div>
 
 			</div>
+			<script>
+  fetch('sidebar.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not OK');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('sidebar-placeholder').innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error loading sidebar:', error);
+    });
+</script>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
