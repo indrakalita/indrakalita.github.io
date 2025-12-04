@@ -16,4 +16,8 @@
       <loc>https://indrajitkalita.com/full_bio.html</loc>
       <priority>0.5</priority>
    </url>
+   <url>
+      <loc>https://indrajitkalita.com/contact.html</loc>
+      <priority>0.5</priority>
+   </url>
 </urlset>
