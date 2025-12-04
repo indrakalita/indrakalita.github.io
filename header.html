@@ -1,23 +1,43 @@
 <!-- header.html -->
-<header id="header" style="display: flex; align-items: center; justify-content: space-between;">
+<header id="header" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;">
   <div style="display: flex; align-items: center;">
+    <!-- Logo / Name -->
     <a href="index.html" class="logo" style="margin-right: 20px;">
       <strong>Indrajit Kalita,</strong> PHD
     </a>
+
     <!-- 🔔 News Ticker -->
-    <div style="overflow: hidden; white-space: nowrap; width: 300px;">
-      <marquee behavior="scroll" direction="left" scrollamount="4" style="font-size: 0.9em; color: #ff6600;">
-        📢 Latest: Article on rainfall prediction accepted | Featured in AIES, AMS Journal
-      </marquee>
+    <div class="news-ticker" style="overflow: hidden; white-space: nowrap; width: 300px;">
+      <span>📢 Latest: Article on rainfall prediction accepted | Featured in AIES, AMS Journal</span>
     </div>
   </div>
 
   <!-- 🔗 Social Icons -->
-  <ul class="icons">
-    <li><a href="https://linkedin.com/in/kalita-indrajit" class="icon brands fa-linkedin" target="_blank" target="_blank"><span class="label">LinkedIn</span></a></li>
+  <ul class="icons" style="display: flex; list-style: none; gap: 10px; margin: 0; padding: 0;">
+    <li><a href="https://linkedin.com/in/kalita-indrajit" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
     <li><a href="https://scholar.google.co.in/citations?user=K32wqykAAAAJ&hl=en" class="icon brands fa-google" target="_blank"><span class="label">Google Scholar</span></a></li>
     <li><a href="https://www.webofscience.com/wos/author/record/HGB-6863-2022" class="icon brands fa-weibo" target="_blank"><span class="label">Web of Science</span></a></li>
     <li><a href="https://github.com/indrakalita" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
     <li><a href="https://orcid.org/0000-0002-2854-0709" class="icon brands fa-orcid" target="_blank"><span class="label">Orcid</span></a></li>
   </ul>
 </header>
+
+<!-- CSS for News Ticker -->
+<style>
+.news-ticker span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 12s linear infinite;
+  font-size: 0.9em;
+  color: #ff6600;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+</style>
